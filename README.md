@@ -55,7 +55,7 @@ YOURFILENAME.mp4-lowquality.txt
 
 Enjoy the scaled down version of your clips.
 
-## Editors tones
+## Editors notes
 
 This has only been tried on Windows 10 so there's no guarantee that it will work on other operating systems. The instructions need to be followed step-for-step or else it might not work propperly or even at all. Only .mp4 files have been tested so there's no guarantee that other files formats will work as well. Crashes can also accour if the user has not installed python on their PC and to solve that python needs to be installed. The recomended clip length is not longer than 30 seconds due to poor optimisation of the code. 
 

@@ -15,7 +15,7 @@ import math
 from PIL import Image
 
 charValues = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]
-charString = [" ", " ", ".", ",", ":", "*", "°", "-", "÷", "(", "{", "x", "m", "±", "o", "¤", "O", "¥", "#", "@", "§", ]
+charString = [" ", " ", ".", ",", ":", "*", "°", "-", "÷", "(", "{", "x", "m", "±", "o", "¤", "O", "§", "¥", "#", "@",  ]
 
 def GetFrame(filename):
     
@@ -92,6 +92,7 @@ def ShowVideo(filename):
     for frame in frames:
         print("\033[H\033[xJ", end="")
         print(frame)
+        time.sleep(0.03)
 
 def main():
 
@@ -114,6 +115,6 @@ if __name__ == "__main__":
 cls 
 venv\\Scripts\\activate 
 python main.py 
-clip.mp4
+sex-now.mp4
 
 """
