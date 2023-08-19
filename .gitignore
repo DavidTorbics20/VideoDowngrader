@@ -1,3 +1,7 @@
+# Custom stuff
+*.mp4
+*.mp4-lowquality.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
