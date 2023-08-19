@@ -16,6 +16,7 @@ from PIL import Image
 
 charValues = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100]
 charString = [" ", " ", ".", ",", ":", "*", "°", "-", "÷", "(", "{", "x", "m", "±", "o", "¤", "O", "§", "¥", "#", "@",  ]
+FPS = 0
 
 def GetFrame(filename):
     
@@ -89,15 +90,35 @@ def ShowVideo(filename):
     frames = file.read().split("DAVID")
 
     os.system('cls')
+    time.sleep(1)
+
     for frame in frames:
         print("\033[H\033[xJ", end="")
         print(frame)
-        time.sleep(0.03)
+        time.sleep(FPS)
 
 def main():
 
     while True:
-        filename = input("Select a file to convert: ")
+        userInput = input("Select a file to convert: ")
+        for letter in userInput:
+            global FPS
+            if (letter.isspace()):
+                filename, fps = userInput.split(" ")
+
+
+                if (len(fps) != 0):
+
+                    FPS = int(fps)
+                    FPS = round((1 / FPS), 5)
+                else:
+                    FPS = round((1 / 48), 5)
+
+                break
+            else:
+                FPS = round((1 / 47), 5)
+                filename = userInput        
+        
         print(pathlib.Path(filename).suffix)
         if (os.path.exists(filename) and pathlib.Path(filename).suffix != '.txt'):
             GetFrame(filename)
@@ -115,6 +136,6 @@ if __name__ == "__main__":
 cls 
 venv\\Scripts\\activate 
 python main.py 
-sex-now.mp4
+niklas.mp4
 
 """
